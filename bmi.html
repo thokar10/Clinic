@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI Calculator — WellSpring Family Clinic</title>
+    <meta
+      name="description"
+      content="Calculate your Body Mass Index (BMI) and see your weight category."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="stylesheet" href="assets/css/bmi.css" />
+  </head>
+  <body>
+    <!-- Navigation  -->
+    <header>
+      <nav class="navbar">
+        <div class="logo">WellSpring <span>Clinic</span></div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="bmi.html" class="active">BMI Calculator</a></li>
+          <li><a href="appointment.html">Appointment</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Sub-hero -->
+    <section class="sub-hero">
+      <div class="sub-hero-inner">
+        <h1>Body Mass Index (BMI) Calculator</h1>
+        <p>
+          Enter your height and weight to estimate your BMI and health category.
+        </p>
+      </div>
+    </section>
+
+    <!-- Calculator -->
+    <main class="section">
+      <div class="bmi-grid">
+        <!-- Form -->
+        <section class="card" aria-labelledby="calcTitle">
+          <h2 id="calcTitle">Calculate your BMI</h2>
+
+          <form id="bmiForm" novalidate>
+            <div class="row">
+              <div class="group">
+                <label for="weight"
+                  >Weight <span class="muted">(kg)</span></label
+                >
+                <input
+                  id="weight"
+                  name="weight"
+                  type="number"
+                  inputmode="decimal"
+                  step="0.1"
+                  min="10"
+                  max="500"
+                  required
+                />
+              </div>
+
+              <div class="group">
+                <label for="height">Height</label>
+                <div class="inline">
+                  <input
+                    id="height"
+                    name="height"
+                    type="number"
+                    inputmode="decimal"
+                    step="0.1"
+                    min="50"
+                    max="300"
+                    required
+                  />
+                  <select
+                    id="heightUnit"
+                    name="heightUnit"
+                    aria-label="Height unit"
+                  >
+                    <option value="cm" selected>cm</option>
+                    <option value="m">m</option>
+                  </select>
+                </div>
+                <small class="muted">Tip: choose <b>cm</b> or <b>m</b>.</small>
+              </div>
+            </div>
+
+            <div class="actions">
+              <button type="submit" class="btn btn-primary">
+                Calculate BMI
+              </button>
+              <button type="reset" class="btn btn-ghost" id="resetBtn">
+                Reset
+              </button>
+            </div>
+
+            <p class="form-error" id="formError" aria-live="assertive"></p>
+          </form>
+        </section>
+
+        <!-- Result -->
+        <section class="card" aria-labelledby="resultTitle">
+          <h2 id="resultTitle">Your Result</h2>
+
+          <div class="bmi-output" aria-live="polite">
+            <p class="lead">
+              Enter your details and click <b>Calculate BMI</b>.
+            </p>
+          </div>
+
+          <!-- Visual scale -->
+          <div class="bmi-scale" role="img" aria-label="BMI scale with marker">
+            <div class="segment under">
+              Underweight<br /><span>&lt; 18.5</span>
+            </div>
+            <div class="segment normal">Normal<br /><span>18.5–24.9</span></div>
+            <div class="segment over">Overweight<br /><span>25–29.9</span></div>
+            <div class="segment obese">Obese<br /><span>30+</span></div>
+            <div class="marker" id="bmiMarker" title="Your BMI position"></div>
+          </div>
+
+          <div class="legend">
+            <span class="badge under">Underweight</span>
+            <span class="badge normal">Normal</span>
+            <span class="badge over">Overweight</span>
+            <span class="badge obese">Obese</span>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <p>&copy; 2025 WellSpring Family Clinic</p>
+    </footer>
+
+    <script src="assets/js/bmi.js" defer></script>
+  </body>
+</html>

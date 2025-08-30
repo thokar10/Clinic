@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact — WellSpring Family Clinic</title>
+    <meta
+      name="description"
+      content="Contact WellSpring Family Clinic — address, phone, email, map, and contact form."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/contact.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <header>
+      <nav class="navbar" aria-label="Primary">
+        <div class="logo">WellSpring <span>Clinic</span></div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="services.html">Services</a>
+          </li>
+          <li><a href="bmi.html">BMI Calculator</a></li>
+          <li><a href="appointment.html">Appointment</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li>
+            <a href="contact.html" class="active" aria-current="page"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Sub-hero -->
+    <section class="sub-hero">
+      <div class="sub-hero-inner">
+        <h1>Get in Touch</h1>
+        <p>We’re here to help. Reach us by phone, email, or the form below.</p>
+      </div>
+    </section>
+
+    <main class="section">
+      <div class="contact-grid">
+        <!-- Contact details -->
+        <section class="card details" aria-labelledby="detailsTitle">
+          <h2 id="detailsTitle">Clinic Details</h2>
+
+          <div class="detail-row">
+            <div class="detail-icon" aria-hidden="true">
+              <i class="fas fa-map-marker-alt text-red-500 text-xl"></i>
+            </div>
+            <div>
+              <div class="detail-label">Address</div>
+              <div>123 Greenway Road, Melbourne VIC 3000</div>
+              <a
+                class="link"
+                target="_blank"
+                rel="noopener"
+                href="https://www.google.com/maps/search/?api=1&query=123%20Greenway%20Road%20Melbourne%20VIC%203000"
+              >
+                Open in Google Maps
+              </a>
+            </div>
+          </div>
+
+          <div class="detail-row">
+            <div class="detail-icon" aria-hidden="true">
+              <i class="fas fa-phone-alt text-green-500"></i>
+            </div>
+            <div>
+              <div class="detail-label">Phone</div>
+              <a class="link" href="tel:+61312345678">(+61) 3 1234 5678</a>
+            </div>
+          </div>
+
+          <div class="detail-row">
+            <div class="detail-icon" aria-hidden="true">
+              <i class="fas fa-envelope text-blue-600 text-lg"></i>
+            </div>
+            <div>
+              <div class="detail-label">Email</div>
+              <a class="link" href="mailto:reception@wellspringclinic.example"
+                >reception@wellspringclinic.example</a
+              >
+            </div>
+          </div>
+
+          <div class="hours">
+            <h3>Clinic Hours</h3>
+            <p>Mon–Fri: 8:00 AM – 6:00 PM</p>
+            <p>Sat: 9:00 AM – 2:00 PM</p>
+            <p>Sun: Closed</p>
+          </div>
+        </section>
+
+        <!-- Map -->
+        <section class="card map-card" aria-labelledby="mapTitle">
+          <h2 id="mapTitle">Map</h2>
+          <div class="map-wrap">
+            <!-- Replace the query with your exact address if needed -->
+            <iframe
+              title="WellSpring Family Clinic location on map"
+              aria-label="Map location"
+              src="https://www.google.com/maps?q=123%20Greenway%20Road%20Melbourne%20VIC%203000&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            >
+            </iframe>
+          </div>
+        </section>
+
+        <!-- Contact form -->
+        <section class="card form-card" aria-labelledby="formTitle">
+          <h2 id="formTitle">Send us a Message</h2>
+
+          <form id="contactForm" novalidate>
+            <div class="row">
+              <div class="group">
+                <label for="name">Full Name</label>
+                <input id="name" name="name" type="text" required />
+              </div>
+              <div class="group">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="group">
+                <label for="phone">Phone</label>
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  inputmode="tel"
+                  pattern="[0-9+\-\s()]{7,20}"
+                  required
+                />
+              </div>
+              <div class="group">
+                <label for="subject">Subject</label>
+                <input id="subject" name="subject" type="text" />
+              </div>
+            </div>
+
+            <div class="group">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="6"
+                placeholder="How can we help you?"
+                required
+              ></textarea>
+            </div>
+
+            <div class="actions">
+              <button type="submit" class="btn btn-primary" id="submitBtn">
+                Send Message
+              </button>
+              <button type="reset" class="btn btn-ghost" id="resetBtn">
+                Reset
+              </button>
+            </div>
+
+            <p
+              id="formStatus"
+              class="form-status"
+              role="status"
+              aria-live="polite"
+            ></p>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 WellSpring Family Clinic</p>
+    </footer>
+
+    <script src="assets/js/contact.js" defer></script>
+  </body>
+</html>
