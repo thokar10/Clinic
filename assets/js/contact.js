@@ -54,7 +54,6 @@
 
     submitBtn.disabled = true;
     setTimeout(() => {
-      alert("Message sent successfully");
       setStatus(
         "Message sent successfully. We will get back to you soon.",
         true

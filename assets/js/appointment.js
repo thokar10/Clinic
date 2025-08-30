@@ -81,7 +81,6 @@
     // Simulate a quick processing feel
     submitBtn.disabled = true;
     setTimeout(() => {
-      alert("Appointment request successful");
       setStatus(
         "Appointment request successful. We will contact you to confirm.",
         true
