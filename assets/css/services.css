@@ -46,7 +46,7 @@ body {
 
 /* Hero Section */
 .hero {
-  background: url("../images/service-bg.jpg") center/cover no-repeat;
+  background: url("../images/banner.jpg") center/cover no-repeat;
   height: 90vh;
   display: flex;
   align-items: center;
@@ -136,9 +136,19 @@ footer {
   }
 }
 
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Sub-hero banner for inner pages */
 .sub-hero {
-  background: url("../images/service-bg.jpg") center/cover no-repeat;
+  background: url("../images/banner.jpg") center/cover no-repeat;
   position: relative;
   color: #fff;
   padding: 5rem 1rem;
@@ -209,13 +219,14 @@ footer {
 .service-icon {
   width: 120px;
   height: 120px;
-  object-fit: cover;
-  border-radius: 10px;
+  object-fit: cover; /* neat crop if aspect ratio varies */
+  border-radius: 10px; /* match Home page look */
   margin: 0 auto 0.75rem;
   display: block;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
 }
 
+/* CTA panel */
 .cta-panel {
   max-width: 900px;
   margin: 0 auto;
